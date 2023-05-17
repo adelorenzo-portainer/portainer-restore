@@ -6,6 +6,6 @@ This demonstration shows how fast and straightforward it is to restore a Portain
 
 Given that the restore process includes all of the Portainer settings, there is no disruption of the Portainer application once it is redeployed on the backup kubernetes cluster. On a real production environment this would include all of the endpoints, registry settings, authentication, etc... configured on the Portainer server.
 
-Below is a quick video demonstrating the automated restore process in action using the example `portainer_hb.sh` bash script. The main Portainer server is running on IP address 192.168.10.171 and the backup is running on the IP address 192.168.10.176
+Below is a quick video demonstrating the automated restore process in action using the example `portainer_hb.sh` bash script. The main Portainer server is running on IP address 192.168.10.171 and the backup is running on the IP address 192.168.10.176. The MinIO S3 server is running on IP 192.168.10.1.
 
 https://github.com/adelorenzo-portainer/portainer-restore/assets/81579885/f04abe77-5736-4562-9d36-8d88709f8d9e
