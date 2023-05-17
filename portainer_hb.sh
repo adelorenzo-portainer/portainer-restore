@@ -2,6 +2,7 @@
 
 clear
 
+# Check if the main Portainer server is running using an API call. An 'Unauthorized' reply means it is. No authentication is needed.
 while true
 do
 portainer_up=`curl --silent --insecure -X GET https://192.168.10.171:30779/api/endpoints | jq -r '.details'`
@@ -13,11 +14,13 @@ fi
 sleep 5
 done
 
+# Deploy a new Portainer instance
 kubectl apply -n portainer -f https://downloads.portainer.io/ee2-18/portainer.yaml
 echo
 echo 'Deploying Portainer server'
 echo
 
+# Check if Portainer is running before applying the restore
 while true
 do
 portainer_running=`kubectl get po -n portainer | tail -1 | awk '{print $3}'`
@@ -31,6 +34,7 @@ done
 
 sleep 5
 
+# Restore the Portainer backup from an S3 bucket
 echo
 echo 'Restoring Portainer backup'
 
