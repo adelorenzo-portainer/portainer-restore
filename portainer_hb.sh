@@ -38,7 +38,7 @@ curl -X POST \
 --insecure \
 --header 'Content-Type: application/json' \
 --url 'https://192.168.10.176:30779/api/backup/s3/restore' \
---data '{"accessKeyID": "portainer", "bucketName": "kubernetes1",  "filename": "portainer-backup_2023-05-17_00-55-00.tar.gz",  "password": "",  "region": "us-east-1",  "s3CompatibleHost": "http://192.168.10.1:9002",  "secretAccessKey": "CHANGME"}'
+--data '{"accessKeyID": "portainer", "bucketName": "kubernetes1",  "filename": "portainer-backup_2023-05-17_00-55-00.tar.gz",  "password": "",  "region": "us-east-1",  "s3CompatibleHost": "http://192.168.10.1:9002",  "secretAccessKey": "CHANGEME"}'
 
 echo
 echo 'Portainer restored'
