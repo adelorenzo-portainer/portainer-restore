@@ -1,4 +1,4 @@
-## Demo of a restore process using a simple hearbeat script and the Portainer API
+## Demo of a restore process using a simple hearbeat script + Portainer API
 
 This demonstration shows how fast and straightforward it is to restore a Portainer instance running on a kubernetes cluster to a new cluster using the Portainer API. The `portainer_hb.sh` is a simple bash script that checks if the main Portainer server is running by simmply doing an API call without needing authorization. If the result output does not respond to the typical pattern of the API call the script then deploys a new Portainer instance and restores a backup from an S3 compatible server, in this case MinIO.
 
